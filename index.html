@@ -34,13 +34,22 @@
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 20px auto;
-            border: 5px solid white;
+            width: 220px; /* Adjust size */
+            height: 220px; /* Maintain aspect ratio */
+            border-radius: 20% 80% 20% 80% / 80% 20% 80% 20%; /* Unique shape */
+            border: 4px solid #3498db; /* Match your color scheme */
+            margin: 30px auto; /* Vertical | Horizontal position */
+            object-fit: cover; /* Prevent image distortion */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Add depth */
+            transition: transform 0.3s ease; /* Hover effect */
         }
 
+
+        /* Hover animation */
+        .profile-img:hover {
+            transform: rotate(5deg) scale(1.05);
+            cursor: pointer;
+        }
         /* Skills Section */
         .skills {
             padding: 50px 0;
